@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 12, 2019 at 09:19 AM
+-- Generation Time: Sep 12, 2019 at 11:40 PM
 -- Server version: 5.7.27-0ubuntu0.18.04.1
 -- PHP Version: 7.2.19-0ubuntu0.18.04.2
 
@@ -108,7 +108,8 @@ INSERT INTO `cars_to_contracts` (`fk_VIN`, `fk_contract_ID`, `pick_up_date`, `dr
 ('qw3er5tgvb6yhju89', 8, '2019-09-20 12:00:00', '2019-09-25 12:00:00'),
 ('12w4er5tgfcvfgtya', 7, '2019-04-01 10:00:00', '2019-04-03 10:00:00'),
 ('12w4er5tgfcvfgtya', 5, '2019-07-10 12:00:00', '2019-07-15 12:00:00'),
-('12w4er5tgfcvfgtya', 9, '2019-09-26 00:00:00', '2019-09-30 00:00:00');
+('12w4er5tgfcvfgtya', 9, '2019-09-26 00:00:00', '2019-09-30 00:00:00'),
+('12345g6yhju789kju', 10, '2019-09-03 00:00:00', '2019-09-16 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -211,7 +212,9 @@ INSERT INTO `invoices` (`invoice_ID`, `date_issued`, `total_amount`, `paid_amoun
 (1, '2019-05-15 15:00:00', '124.00', '124.00', 'closed'),
 (2, '2019-07-24 15:00:00', '250.00', '250.00', 'closed'),
 (3, '2019-09-11 15:00:00', '35.00', '0.00', 'open'),
-(4, '2019-04-20 15:00:00', '87.00', '60.00', 'dispute');
+(4, '2019-04-20 15:00:00', '87.00', '60.00', 'dispute'),
+(5, '2019-09-11 00:00:00', '500.00', '150.00', 'open'),
+(6, '2019-09-11 00:00:00', '780.00', '780.00', 'open');
 
 -- --------------------------------------------------------
 
@@ -312,7 +315,8 @@ INSERT INTO `rental_contracts` (`contract_ID`, `start_date`, `end_date`, `fk_inv
 (6, '2019-05-10 10:00:00', '2019-05-16 10:00:00', 1, 1, 1, 'VIE_01', 'VIE_01', 'car damage / break in, customer got replacement higher category'),
 (7, '2019-04-01 18:00:00', '2019-04-03 18:00:00', 4, 3, 1, 'VIE_01', 'VIE_01', NULL),
 (8, '2019-09-20 12:00:00', '2019-09-25 12:00:00', 3, 4, 4, 'MUC_01', 'MUC_01', NULL),
-(9, '2019-09-26 00:00:00', '2019-09-30 00:00:00', NULL, 5, 3, 'VIE_01', 'VIE_02', NULL);
+(9, '2019-09-26 00:00:00', '2019-09-30 00:00:00', 5, 5, 3, 'VIE_01', 'MUC_01', 'send invoice to corporate customer'),
+(10, '2019-09-03 00:00:00', '2019-09-16 00:00:00', 6, 1, 2, 'VIE_02', 'VIE_01', '');
 
 --
 -- Indexes for dumped tables
@@ -420,7 +424,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `invoice_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `invoice_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `products`
 --
@@ -430,7 +434,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `rental_contracts`
 --
 ALTER TABLE `rental_contracts`
-  MODIFY `contract_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `contract_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- Constraints for dumped tables
 --
