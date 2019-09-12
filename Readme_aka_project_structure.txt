@@ -3,11 +3,13 @@ Project structure:
 1) STORY and explanation of connections between data entities;
     <story TBA>
     
-2) 4 steps for the DB-development (exported as PDF files);
+2) DB-development (exported as PDF files);
 - cr10_valeria_nazarova_carrental_step1.pdf
 - cr10_valeria_nazarova_carrental_step2.pdf
-draw UML diagram (classes/attributes/data types/methods)
-normalze the final data base before recreation
+- cr10_valeria_nazarova_carrental_step3.pdf
+database have been optimized up to certain extend during 3 steps, 
+so I have decided to drop the 4th step as it would result in producing even more tables, 
+and that was not the goal of the project =^_^=
 
 3) mySQL database (exported as SQL file);
 create DB with defined name (cr10_john_doe_carrental.sql)
